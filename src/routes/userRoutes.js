@@ -32,7 +32,6 @@ router.post('/login', passport.authenticate('local', {
     failureFlash: true
 }), (req, res) => {
     req.flash('success', 'Welcome Back!');
-    console.log('Inside login route');
     res.redirect('/products');
 });
 
